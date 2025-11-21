@@ -1,7 +1,83 @@
-HTML
+<!DOCTYPE html>
+<html lang="es">
 <head>
- <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Nombres Estática 📜</title>
+    <style>
+        /* CSS para dar un poco de estilo */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4a90e2;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none; /* Quita los puntos de la lista */
+            padding: 0;
+        }
+
+        li {
+            background-color: #e6f0ff;
+            border: 1px solid #c9e2ff;
+            margin-bottom: 8px;
+            padding: 12px;
+            border-radius: 5px;
+            text-align: left;
+            transition: background-color 0.3s;
+        }
+
+        li:hover {
+            background-color: #b3d9ff;
+        }
+    </style>
 </head>
 <body>
-<h1> Version 2: Hola GIT </h1>
+
+    <div class="container">
+        <h1>👤 Lista de Estudiantes Registrados</h1>
+
+        <ul id="listaDeNombres">
+            <li>Luz Analy Enriquez Guerrero</li>
+            <li>Alma Yanely Cano Huerta</li>
+            <li>Mia Yamileth Zuñiga Martinez</li>
+            <li>Carlo Hernandez Mendoza</li>
+            <li>Emmanuel Jain Ruiz</li>
+        </ul>
+
+        <p id="contador"></p>
+    </div>
+
+    <script>
+        // JavaScript opcional para funcionalidad básica (aún es estático)
+        document.addEventListener('DOMContentLoaded', () => {
+            const lista = document.getElementById('listaDeNombres');
+            const items = lista.getElementsByTagName('li');
+            const contadorElemento = document.getElementById('contador');
+            
+            // Muestra cuántos nombres hay en la lista.
+            contadorElemento.textContent = `Total de nombres en la lista: ${items.length}`;
+        });
+    </script>
+
 </body>
+</html>
